@@ -1,4 +1,4 @@
-/**
+/**haha
  * RBE3001 - Nucleo Firmware
  *
  * Instructions
@@ -32,7 +32,7 @@ HIDSimplePacket coms;      // HID packet handlers
 
 // The following array contains the "home" positions (in encoder ticks) for each
 // of the robot's joints 
-float homePosition[3] = {0,0,0};
+float homePosition[3] = {-33,7,101};
 
 void runPid() {
 	// update all positions fast and together
