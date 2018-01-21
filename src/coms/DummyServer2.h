@@ -1,21 +1,21 @@
-#ifndef  DummyServer_H
-#define DummyServer_H
+#ifndef  DummyServer2_H
+#define DummyServer2_H
 #include <PID_Bowler.h>
 #include <PacketEvent.h>
 #include "../drivers/MyPid.h"
 #include <cmath>        // std::abs
 
-#define DUMMY_SERVER_ID 42      // identifier for this server
+#define DUMMY_SERVER2_ID 43      // identifier for this server
 
 
-class DummyServer: public PacketEventAbstract{
+class DummyServer2: public PacketEventAbstract{
 
 private:
 	  PIDimp ** myObjects;    // array of PidServers - one for each joint
 	  int myNumberOfChannels;
 public:
-	  DummyServer (PIDimp ** Objects, int numberOfChannels)
-	      : PacketEventAbstract(DUMMY_SERVER_ID)
+	  DummyServer2 (PIDimp ** Objects, int numberOfChannels)
+	      : PacketEventAbstract(DUMMY_SERVER2_ID)
 	    {
 		  myObjects = Objects;
 	      myNumberOfChannels = numberOfChannels;

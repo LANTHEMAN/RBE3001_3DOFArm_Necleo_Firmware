@@ -1,6 +1,6 @@
-#include "DummyServer.h"
+#include "DummyServer2.h"
 
-void DummyServer::event(float * packet){
+void DummyServer2::event(float * packet){
 
  // DO something
  // set values back to Buffer
@@ -36,12 +36,10 @@ void DummyServer::event(float * packet){
    */
   for(int i = 0; i < myNumberOfChannels; i++)
     {
-      float position = 1.0;
-      float velocity = 2.0;
-      float torque   = 3.0;
+      float position = myObjects[i]->GetPIDPosition();
+
 
       packet[(i*3)+0] = position;
-      packet[(i*3)+1] = velocity;
-      packet[(i*3)+2] = torque;
+
     }
 }
