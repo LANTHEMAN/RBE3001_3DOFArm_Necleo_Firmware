@@ -22,9 +22,9 @@
 #include "RunEvery.h"
 
 // Initial values for the PID gains
-#define kp 0.003
+#define kp 0.0026
 #define ki 0.0
-#define kd 0.001
+#define kd 0.002
 #define vkp 1
 
 #define vkd 0
