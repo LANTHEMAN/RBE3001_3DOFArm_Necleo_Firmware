@@ -18,7 +18,11 @@
 //Coms
 #include "coms/PidServer.h"
 #include "coms/DummyServer.h"
+#include "coms/DummyServer2.h"
+#include "coms/DummyServer3.h"
 // DEFINES
+extern float AXX1;
+
 #define REV2
 //#define REV1
 //#define PLANC
