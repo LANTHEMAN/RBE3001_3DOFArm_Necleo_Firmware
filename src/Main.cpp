@@ -33,7 +33,7 @@ HIDSimplePacket coms;      // HID packet handlers
 // The following array contains the "home" positions (in encoder ticks) for each
 // of the robot's joints 
 
-float homePosition[3] = {-425,3000,-649};
+float homePosition[3] = {-425+AXX1,3000,-649};//the calibrated position plus the part 10 new origin define offset
 
 
 void runPid() {
@@ -134,7 +134,8 @@ int main() {
 	 *            by including the relevant header file at the beginning of this
 	 *            source file
 	 */
-	coms.attach(new DummyServer3(pid,1));
+	//attach all servers
+	coms.attach(new DummyServer3(pid,1));//only read Axis 1 data
 	coms.attach(new DummyServer2(pid,DOFs));
 	coms.attach(new DummyServer(pid,DOFs));
 	coms.attach(new PidServer(pid, DOFs));
