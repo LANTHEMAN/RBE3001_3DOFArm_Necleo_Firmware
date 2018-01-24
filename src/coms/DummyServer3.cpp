@@ -13,10 +13,10 @@ void DummyServer3::event(float * packet){
    */
 
   bool skipLink = false; //!FIXME Do we need this? If not, let's get rid of it
-  AXX1 = packet[3];
-  for (int i = 0; i < myNumberOfChannels; i++)
+  
+  for (int i = 0; i < 1; i++)//for only first time, set Axis 1 offset value AXX to current encoder value, recalibrate home position
     {
-
+        AXX1 = packet[3];
     }
 
   /*
@@ -40,7 +40,7 @@ void DummyServer3::event(float * packet){
       float position = myObjects[i]->GetPIDPosition();
 
 
-      packet[(i*3)+0] = position;
+      packet[(i*3)+0] = position;//send axis 1 encoder value
 
     }
 }
