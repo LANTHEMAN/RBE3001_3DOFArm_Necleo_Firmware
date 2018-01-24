@@ -36,11 +36,11 @@ void DummyServer::event(float * packet){
    */
   for(int i = 0; i < myNumberOfChannels; i++)
     {
-      float position = 1.0;
-      float velocity = 2.0;
-      float torque   = 3.0;
+      float position = 1.0;//hard code all position to 1.0
+      float velocity = 2.0;//hard code velocity to 2.0
+      float torque   = 3.0;//torque to 3.0
 
-      packet[(i*3)+0] = position;
+      packet[(i*3)+0] = position;//re-write packet to hard code value
       packet[(i*3)+1] = velocity;
       packet[(i*3)+2] = torque;
     }
