@@ -39,7 +39,7 @@ void DummyServer2::event(float * packet){
       float position = myObjects[i]->GetPIDPosition();
 
 
-      packet[(i*3)+0] = position;
+      packet[(i*3)+0] = position;//only return the Axis 1 encoder reading
 
     }
 }
